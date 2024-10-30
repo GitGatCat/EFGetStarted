@@ -48,9 +48,11 @@ db.SaveChanges();
 var mine_blog_poster = tekBlog.Posts
     .OrderBy(b => b.PostId);
 
+// \n inside strings create newline when printed to console
 Console.WriteLine("Alle mine poster levert rett til skjermen\n");
 foreach (var post in mine_blog_poster)
 {
+    // the tab control character '\t' creates spacing, which makes the print stand out from the rest
     Console.WriteLine("\t" + post.Title);
     Console.WriteLine("\t\t" + post.Content);
 }
